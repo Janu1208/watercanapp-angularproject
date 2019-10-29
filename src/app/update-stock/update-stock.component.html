@@ -1,0 +1,21 @@
+<form>
+        <table align="center">
+        <tr><td>
+        <label>Update Cans:</label>
+        <input type="number" name="updatecans" id="updatecans" min="1" maxlength="4"  title="Please Enter Number of Watercans grater than or equal to 1" placeholder="Enter Cans" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required autofocus/>
+        <br/>
+        <span id="updatelocation" style="color: red"></span></td></tr>
+        <tr>
+                <td>
+                <div class="wrapper">
+                <input  type="submit" value="Update"  class="btn btn-success">
+                <button type="reset" class="btn btn-danger" value="clear">Clear</button>
+                 <input type="button" class ="button" value="Back" onclick="history.go(-1);">
+                </div>
+                </td>
+                </tr>
+        </table>
+        </form>
+     
+     
+     

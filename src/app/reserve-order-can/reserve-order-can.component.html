@@ -1,0 +1,12 @@
+<div id="id"></div>
+<body style="text-align:center" font-color="red">
+<form onsubmit="canReserve()">
+        &nbsp;
+        <h1>Order Reserved Cans</h1><br>
+<a href = "availability.jsp">Availability Stock</a><br><br>
+   Please Enter Your Reserve ID:
+   <input type = "number" name = "reserveId" id ="reserveId" min="1" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" required><br><br>
+<input type = "submit" value = "Yes" class="btn btn-success">&nbsp;
+<input type = "button" value = "No" class="btn btn-danger" onclick="window.location.href = '?pageName=canSetUp.jsp';"><br><br>
+</form>
+</body>

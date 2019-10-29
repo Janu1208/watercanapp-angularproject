@@ -1,0 +1,12 @@
+<div id="id"></div>
+<body style="text-align:center" font-color="red">
+<form onsubmit="canReserve()">
+        &nbsp; 
+<h1>Reserve Cans</h1><br>
+<a href = "availability.jsp">Availability Stock</a><br><br>
+Enter Number Of Cans to reserve:
+<input type = "number" name = "reserveCans" id ="reserveCans" placeholder="Enter no.of cans" min="1" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" required><br><br>
+<input type = "submit" value = "Yes" class="btn btn-success">&nbsp;
+<input type = "button" value = "No" class="btn btn-danger" onclick="window.location.href = '?pageName=canSetUp.jsp';"><br>
+</form>
+</body>
