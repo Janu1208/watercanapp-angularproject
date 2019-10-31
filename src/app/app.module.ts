@@ -15,11 +15,15 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule} from '@angular/forms';
-import { ViewStockComponent } from './view-stock/view-stock.component';
 import { UpdateStockComponent } from './update-stock/update-stock.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { RegisterserviceService } from './core/registerservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginserviceService } from './core/loginservice.service';
+import { AdminloginService } from './core/adminlogin.service';
+import { ViewStockService } from './core/viewstock.service';
+import { ViewstockComponent } from './viewstock/viewstock.component';
+
 
 
 @NgModule({
@@ -36,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdminLoginComponent,
     HeaderComponent,
     HomeComponent,
-    ViewStockComponent,
+    ViewstockComponent,
     UpdateStockComponent,
     AdminHomeComponent
   ],
@@ -46,7 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [RegisterserviceService],
+  providers: [RegisterserviceService,LoginserviceService,AdminloginService,ViewStockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

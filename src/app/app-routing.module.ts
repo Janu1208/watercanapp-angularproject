@@ -10,7 +10,8 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HomeComponent } from './home/home.component';
 import { UpdateStockComponent } from './update-stock/update-stock.component';
-import { ViewStockComponent } from './view-stock/view-stock.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { ViewstockComponent } from './viewstock/viewstock.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
  {path:'userHome',component:UserHomeComponent},
  {path:'mainHome',component:HomeComponent},
  { path:'updatestock',component:UpdateStockComponent},
-{ path:'viewstock',component:ViewStockComponent}
+{ path:'viewstock',component:ViewstockComponent},
+{path:'adminhome',component:AdminHomeComponent}
 ];
 
 @NgModule({

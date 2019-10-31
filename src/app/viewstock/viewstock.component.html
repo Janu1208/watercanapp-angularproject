@@ -1,0 +1,28 @@
+<div id="users-section">
+        <table border="1" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>StockId</th>
+                    <th>Updated Cans</th>
+                </tr>
+            </thead>
+            <tbody id="tbl">
+                    <tr *ngFor="let data of data">
+                            <td>{{data.dateTime}}</td>
+                            <td>{{data.stockId}}</td>
+                            <td>{{data.availableCans}}</td>
+                        </tr>
+                    </tbody>
+        </table>
+    </div>
+<table align="center">
+    <tr>
+       <td>
+       <div class="wrapper">
+        <input type="button" class ="button" value="Back" onclick="history.go(-1);">
+       </div>
+       </td>
+       </tr>
+       </table>
+
