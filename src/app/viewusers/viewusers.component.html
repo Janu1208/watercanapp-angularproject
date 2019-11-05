@@ -1,0 +1,33 @@
+&nbsp;
+<h2 style="color: DARKVIOLET;" align="center">User Details</h2>
+<div id="users-section">
+    <table border="1" align="center"  id="stock">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                        </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let data of data">
+                        <td>{{data.userId}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.address}}</td>
+                                            </tr>
+                </tbody>
+    </table>
+</div>
+&nbsp;
+<table align="center">
+<tr>
+   <td>
+   <div class="wrapper">
+        <button type="button" class="btn btn-outline-primary" (click)="back()">Back</button>
+   </div>
+   </td>
+   </tr>
+   </table>
+

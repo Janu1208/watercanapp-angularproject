@@ -23,6 +23,7 @@ let formData:any={
 this.adminSevice.adminlogin(formData).subscribe((res)=>{
  console.log(JSON.stringify(res));
  alert('Login success');
+ localStorage.setItem("LOGGED_IN_ADMIN",(JSON.stringify(res)));
  this.router.navigate(['./adminhome']);
 },(err)=>{
 console.log('error=>'+JSON.stringify(err));

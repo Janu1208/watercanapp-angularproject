@@ -1,0 +1,35 @@
+&nbsp;
+<h2 style="color: DARKVIOLET;" align="center">Reserve Details</h2>
+<div id="users-section">
+    <table border="1" align="center"  id="stock">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Reserved Cans</th>
+                <th>Reserved Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let data of data">
+                        <td>{{data.reserveId}}</td>
+                        <td>{{data.userName}}</td>
+                        <td>{{data.reservedCans}}</td>
+                        <td>{{data.date}}</td>
+                        <td>{{data.status}}</td>
+                    </tr>
+                </tbody>
+    </table>
+</div>
+&nbsp;
+<table align="center">
+<tr>
+   <td>
+   <div class="wrapper">
+        <button type="button" class="btn btn-outline-primary" (click)="back()">Back</button>
+   </div>
+   </td>
+   </tr>
+   </table>
+

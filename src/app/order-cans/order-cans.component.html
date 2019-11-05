@@ -5,17 +5,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-        <form onsubmit="orderCans()">
+<form (submit)="orderedCans()" ngNativeValidate >
                 &nbsp;
                 &nbsp;
                 <h1>Order Cans</h1>
-                <a href = "availability.jsp">Availability Stock</a><br>
+                <a href='viewstock'>View Available Stock</a><br>
                 <br /> How many cans you want to order?
-               <input type="number" name="orderCans" id="orderCans" placeholder="Enter no.of cans" min=1 pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required autofocus /><br> <br />
-               <input type="submit" value="Submit" class="btn btn-success" (click)="orderCans()"> &nbsp;
-               <input type="button" value="Reset" class="btn btn-danger" > &nbsp;
-               <input type="button" class="button" value="Back" class="btn btn-primary" onclick="history.go(-1);"> 
-        </form>
+               <input type="number" min="1" [(ngModel)]= "orderCans" name="orderCans" id="orderCans" placeholder="Enter no.of cans" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required autofocus /><br> <br />
+               <input type="submit" value="Submit" class="btn btn-success"> &nbsp;
+               <input type="reset" value="Reset" class="btn btn-danger" > &nbsp;
+               <input type = "button" value = "Back"(click)="back()" class="btn btn-danger"><br>
+            </form>
 </div>
 </div>
 </div>

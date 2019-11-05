@@ -1,0 +1,36 @@
+&nbsp;
+<h2 style="color: DARKVIOLET;" align="center">Order Details</h2>
+&nbsp;
+
+<div id="users-section">
+    <table border="1" align="center" id="stock">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Ordered Cans</th>
+                <th>Ordered Date</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let data of data">
+                        <td>{{data.id}}</td>
+                        <td>{{data.userName}}</td>
+                        <td>{{data.orderCans}}</td>
+                        <td>{{data.dateTime}}</td>
+                    </tr>
+                </tbody>
+    </table>
+</div>
+&nbsp;
+
+<table align="center">
+<tr>
+   <td>
+   <div class="wrapper">
+        <button type="button" class="btn btn-outline-primary" (click)="back()">Back</button>
+   </div>
+   </td>
+   </tr>
+   </table>
+

@@ -16,8 +16,6 @@ export class UserRegisterComponent implements OnInit {
   password:any;
   address:any;
   constructor(private registerService :RegisterserviceService,private router:Router) { }
-  mainHeader:boolean=true;
-  userHeader:boolean=false;
   ngOnInit(){
   }
 

@@ -1,14 +1,14 @@
 <div id="id"></div>
 <body style="text-align:center" font-color="red">
-<form onsubmit="canReserve()">
+<form (submit)="modifyCans()" ngNativeValidate>
     &nbsp;
         <h1>Modify Reserved Cans</h1><br>
-<a href = "availability.jsp">Availability Stock</a><br><br>
-   Please Enter Your Reserve ID:
-   <input type = "number" name = "reserveId" id ="reserveId" min="1" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" required><br><br>
+        <a href='viewstock'>View Available Stock</a><br>
+        Please Enter Your Reserve ID:
+   <input type = "number" min="1" [(ngModel)]="reserveId" name = "reserveId" id ="reserveId" min="1" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" required><br><br>
 Please Enter No Of Cans to Order::
-<input type = "number" name = "reserveCans" id ="reserveCans" min="1" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" required><br><br>
-<input type = "submit" value = "Yes" class="btn btn-success">&nbsp;
-<input type = "button" value = "No" class="btn btn-danger" onclick="window.location.href = '?pageName=canSetUp.jsp';"><br><br>
+<input type = "number"  min="1" [(ngModel)]="reservedOrderCans" name = "reserveCans" id ="reserveCans" min="1" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" required><br><br>
+<input type = "submit" value = "Submit" class="btn btn-success">&nbsp;
+<input type = "button" value = "Back"(click)="back()" class="btn btn-danger"><br>
 </form>
 </body>

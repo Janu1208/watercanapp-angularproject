@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class UserHomeComponent implements OnInit {
 
   constructor() { }
-  userHeader:boolean=true;
-  mainHeader:boolean=false;
   ngOnInit() {
   }
 }

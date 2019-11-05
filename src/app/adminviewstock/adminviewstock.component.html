@@ -1,0 +1,35 @@
+&nbsp;
+<h2 style="color: DARKVIOLET;" align="center">Available Stock</h2>
+&nbsp;
+<div id="users-section">
+        <div class="row justify-content-center">
+        <table border="1"  id="stock">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stock Id</th>
+                    <th>Available Cans</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let data of data">
+                            <td>{{data.dateTime}}</td>
+                            <td>{{data.stockId}}</td>
+                            <td>{{data.availableCans}}</td>
+                        </tr>
+                    </tbody>
+        </table>
+    </div>
+    &nbsp;
+    <table align="center">
+            <tr>
+               <td>
+               <div class="wrapper">
+                    <button type="button" class="btn btn-outline-primary" (click)="back()">Back</button>
+               </div>
+               </td>
+               </tr>
+               </table>
+    </div>
+
+

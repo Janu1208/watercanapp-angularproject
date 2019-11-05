@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark  bg-dark" *ngIf="userHeader">
+<nav class="navbar navbar-expand-md navbar-dark  bg-dark">
     <a class="navbar-brand" href="#">Welcome </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,10 +9,10 @@
           <a class="nav-link" routerLink="userHome">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="availableCans">Available Cans</a>
+          <a class="nav-link" routerLink="viewstock">Available Cans</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " routerLink="userLogin">Logout</a>
+          <a class="nav-link" (click)="logout()">Welcome {{authService.getUser().name}} !!!( Log out ) </a> 
         </li>
       </ul>
       

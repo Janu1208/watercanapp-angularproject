@@ -11,8 +11,6 @@ export class UserLoginComponent implements OnInit {
   email:any;
   password:any;
   constructor(private loginService :LoginserviceService,private router:Router) { }
-  mainHeader:boolean=true;
-  userHeader:boolean=false;
   ngOnInit() {
   }
   login()
@@ -23,7 +21,9 @@ export class UserLoginComponent implements OnInit {
   };
   this.loginService.login(formData).subscribe((res)=>{
     console.log(JSON.stringify(res));
+   
     alert('login succesfull');
+    localStorage.setItem("LOGGED_IN_USER",(JSON.stringify(res)));
     this.router.navigate(['./userHome']);
      
   },(err)=>{

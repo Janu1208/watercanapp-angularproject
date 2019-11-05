@@ -23,6 +23,18 @@ import { LoginserviceService } from './core/loginservice.service';
 import { AdminloginService } from './core/adminlogin.service';
 import { ViewStockService } from './core/viewstock.service';
 import { ViewstockComponent } from './viewstock/viewstock.component';
+import { OrdercanserviceService } from './core/ordercanservice.service';
+import { UpdatestockService } from './core/updatestock.service';
+import { ReservecanService } from './core/reservecan.service';
+import { VieworderComponent } from './vieworder/vieworder.component';
+import { VieworderService } from './core/vieworder.service';
+import { ViewreserveComponent } from './viewreserve/viewreserve.component';
+import { ViewreserveService } from './core/viewreserve.service';
+import { AdminoperationsheaderComponent } from './adminoperationsheader/adminoperationsheader.component';
+import { ViewusersComponent } from './viewusers/viewusers.component';
+import { ViewusersService } from './core/viewusers.service';
+import { AdminviewstockComponent } from './adminviewstock/adminviewstock.component';
+import { AdminViewStockService } from './core/adminviewstock.service';
 
 
 
@@ -42,7 +54,12 @@ import { ViewstockComponent } from './viewstock/viewstock.component';
     HomeComponent,
     ViewstockComponent,
     UpdateStockComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    VieworderComponent,
+    ViewreserveComponent,
+    AdminoperationsheaderComponent,
+    ViewusersComponent,
+    AdminviewstockComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +67,7 @@ import { ViewstockComponent } from './viewstock/viewstock.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [RegisterserviceService,LoginserviceService,AdminloginService,ViewStockService],
+  providers: [RegisterserviceService,LoginserviceService,AdminloginService,ViewStockService,OrdercanserviceService,UpdatestockService,ReservecanService,VieworderService,ViewreserveService,ViewusersService,AdminViewStockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
